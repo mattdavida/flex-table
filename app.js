@@ -5,11 +5,7 @@ let content = document.getElementsByClassName('content');
 let page = document.getElementsByClassName('page')[0];
 
 let hasOverflowHide = (el) => {
-    if (el.classList.contains('overflow-hide')) {
-        el.classList.remove('overflow-hide');
-    } else {
-        el.classList.add('overflow-hide');
-    }
+    el.classList.contains('overflow-hide') ? el.classList.remove('overflow-hide') : el.classList.add('overflow-hide');
 }
 
 let onLoad = () => {
@@ -17,12 +13,7 @@ let onLoad = () => {
 }
 
 let resize = () => {
-    if (document.body.clientHeight <= 575) {
-        page.style.height = (document.body.clientHeight - 100);
-    } else {
-        page.style.height = height;
-
-    }
+    document.body.clientHeight <= 575 ? page.style.height = (document.body.clientHeight - 100) : page.style.height = height;
 }
 
 window.onload = onLoad;
