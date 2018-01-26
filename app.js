@@ -24,12 +24,12 @@ Array.prototype.forEach.call(content[0].children, el => {
     Array.prototype.forEach.call(children, child => {
         let height = child.clientHeight;
 
-        child.addEventListener('mouseover', (event) => {
+        child.addEventListener('mouseover', () => {
             hasOverflowHide(child);
             child.clientHeight > 18 ? child.style.cursor = 'pointer' : child.style.cursor = 'default';
         });
 
-        child.addEventListener('mouseout', (event) => {
+        child.addEventListener('mouseout', () => {
             hasOverflowHide(child);
         });
 
