@@ -22,7 +22,6 @@ window.onresize = resize;
 Array.prototype.forEach.call(content[0].children, el => {
     let children = el.children;
     Array.prototype.forEach.call(children, child => {
-        let height = child.clientHeight;
 
         child.addEventListener('mouseover', () => {
             hasOverflowHide(child);
