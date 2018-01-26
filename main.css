@@ -1,0 +1,86 @@
+html,
+body,
+.page {
+  cursor: default;
+  height: 100%; /* needed for proper layout */
+}
+body {
+  overflow: hidden;
+  margin: 0;
+  min-height: 100%;
+}
+html {
+  height: 100%;
+}
+
+.page {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  border-bottom: 1px solid;
+}
+
+.header {
+  margin-right: 17px;
+  margin-top: auto;
+  flex-direction: row;
+  flex: 0 0 auto;
+}
+
+div.header > div {
+  min-height: 30px;
+}
+
+.content {
+  flex: 1 1 auto;
+  position: relative;
+  overflow-y: auto;
+}
+
+.item {
+  border-style: solid;
+  text-overflow: ellipsis;
+  border-width: 1px;
+  width: auto;
+  flex-wrap: nowrap;
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+.overflow-hide {
+  overflow:hidden;
+  white-space:nowrap;
+  text-overflow: ellipsis;
+}
+
+/* On the flex container */
+.flex-container {
+   display: flex;
+   flex-direction: row;
+   margin-bottom: auto;
+}
+
+
+.flex-container2 {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+ }
+
+.big {
+   /* This will be twice as */
+   /* big as the small item. */
+   flex: 2 0 0;
+}
+
+.small {
+   flex: 1 0 0;
+}
+
+@media screen and (min-device-width: 0px) and (max-width: 554px) {
+    .hide-header-item {
+      overflow:hidden;
+      min-height: 54px;
+    }
+}
